@@ -16,9 +16,11 @@ export const ProductCount = (props:any) => {
       setQuantity(0);
       return
     }
+    console.log(quantity, '-' , number)
     const qtyTemp =  (+quantity + +number);
     
-    setQuantity(number)
+    setQuantity(qtyTemp)
+    setTotal(+qtyTemp + +item.cantidad)
   };
 
   const onChangeQuantityText = (e: any) => {
